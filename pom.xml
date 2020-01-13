@@ -24,7 +24,15 @@
                 <artifactId>mule-maven-plugin</artifactId>
                 <version>${mule.maven.plugin.version}</version>
                 <extensions>true</extensions>
-                <configuration>
+            </plugin>
+            
+            <!-- Deploy to Runtime -->
+			<plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>3.3.2</version>
+				<extensions>true</extensions>
+				<configuration>
 					<armDeployment>
 						<muleVersion>${app.runtime}</muleVersion>
 						<uri>https://anypoint.mulesoft.com</uri>
@@ -35,7 +43,8 @@
 						<environment>Sandbox</environment>
 					</armDeployment>
 				</configuration>
-            </plugin>
+				
+			</plugin>
             
         </plugins>
     </build>
